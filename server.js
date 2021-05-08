@@ -1,8 +1,12 @@
 const express = require('express');
 const SpotifyWebApi = require('spotify-web-api-node');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+app.use(cors())
+app.use(bodyParser.json());
 
 app.post('/login', (req, res) => {
 
@@ -24,4 +28,6 @@ app.post('/login', (req, res) => {
         res.sendStatus(400)
     })
 })
+
+app.listen(3002)
 
