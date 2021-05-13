@@ -3,7 +3,7 @@ import React from 'react'
 export const TrackSearchResult = ({track}) => {
 
     const handlePlay = () => {
-        
+
     }
     return (
         <div 
@@ -16,6 +16,7 @@ export const TrackSearchResult = ({track}) => {
                 <div>{track.title}</div>
                 <div className="text-muted">{track.artist}</div>
             </div>
+            <div>Buttom</div>
         </div>
     )
 }
