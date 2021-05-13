@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const TrackSearchResult = ({track}) => {
+export const TrackSearchResult = ({track, chooseTrack}) => {
 
     const handlePlay = () => {
-
+        chooseTrack(track)
     }
     return (
         <div 
@@ -16,7 +16,6 @@ export const TrackSearchResult = ({track}) => {
                 <div>{track.title}</div>
                 <div className="text-muted">{track.artist}</div>
             </div>
-            <div>Buttom</div>
         </div>
     )
 }
